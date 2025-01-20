@@ -23,7 +23,7 @@ namespace HomeEnergyUsageApi.Controllers
                 if (home.Id == id)
                     return Ok(home);
             }
-            return null;
+            return NotFound();
         }
 
         [HttpPost]
@@ -44,7 +44,7 @@ namespace HomeEnergyUsageApi.Controllers
                     return Ok(newHome);
                 }
             }
-            return null;
+            return NotFound();
         }
 
         [HttpDelete("{id}")]
@@ -65,7 +65,7 @@ namespace HomeEnergyUsageApi.Controllers
             }
             else
             {
-                return null;
+                return NotFound();
             }
         }
     }
